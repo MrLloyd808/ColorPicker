@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 
 function ColorPicker() {
-    const [color, setColor] = useState("#ffffff")
+    const initColor = localStorage.getItem('bgColor')
+    const [color, setColor] = useState(initColor)
     function handleColor(event) {
         setColor(event.target.value)
+        localStorage.setItem('bgColor', event.target.value)
     }
     const body = document.body
     body.style.backgroundColor = color
