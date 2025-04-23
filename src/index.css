@@ -13,7 +13,7 @@
   padding: 0;
   overflow: hidden;
   box-sizing: border-box;
-  transition: all .3s ease;
+  transition: background .3s ease;
 }
 
 body {
@@ -45,14 +45,17 @@ button:focus-visible {
 }
 
 #wrapper {
-  background-color: transparent;
+  background: url("./assets/image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: fit-content;
   width: 230px;
-  border: 2px solid #222;
+  border: 3px solid  #646cff;
   height: 230px;
   border-radius: 50%;
   padding: 4%;
@@ -66,9 +69,4 @@ button:focus-visible {
   padding: 2%;
   border-radius: 3px;
 
-}
-
-inpuut::-moz-color-swatch {
-  border: none;
-  border-radius: 50%;
 }
