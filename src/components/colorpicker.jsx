@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 function ColorPicker() {
-    const [color, setColor] = useState()
+    const [color, setColor] = useState("#ffffff")
     function handleColor(event) {
         setColor(event.target.value)
     }
@@ -9,10 +9,10 @@ function ColorPicker() {
     body.style.backgroundColor = color
 
     return (
-        <>
-        <input type="color" onChange={handleColor} value={color}/>
-        <p>{color}</p>
-        </>
+        <div id="wrapper">
+        <p id="value-text">{color}</p>
+        <input type="color" onChange={handleColor} />
+        </div>
     )
 }
 
