@@ -54,7 +54,7 @@ button:focus-visible {
   width: 230px;
   border: 2px solid #222;
   height: 230px;
-  border-radius: 5px;
+  border-radius: 50%;
   padding: 4%;
 }
 
@@ -65,4 +65,10 @@ button:focus-visible {
   background-color: #222;
   padding: 2%;
   border-radius: 3px;
+
+}
+
+inpuut::-moz-color-swatch {
+  border: none;
+  border-radius: 50%;
 }
