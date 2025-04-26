@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 function ColorPicker() {
     const [color, setColor] = useState('#213448')
@@ -6,6 +6,11 @@ function ColorPicker() {
         setColor(event.target.value)
         localStorage.setItem('bgColor', event.target.value)
     }
+
+    useEffect(() => {
+        document.title = `Current Color: ${color}`
+    }, [color])
+
     const body = document.body
     body.style.backgroundColor = color
 
