@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 function ColorPicker() {
-    const [color, setColor] = useState('#213448')
+    const [color, setColor] = useState('#030202')
     function handleColor(event) {
         setColor(event.target.value)
         localStorage.setItem('bgColor', event.target.value)
